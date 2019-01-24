@@ -6,7 +6,6 @@
   <title>Forms_data</title>
 
   <link rel="stylesheet" href="css/form.css" type="text/css">
-  <script type="text/javascript" src="js/form.js" ></script>
 
   </head>
   <body class="body-style">
@@ -16,52 +15,151 @@
 
  
   
-    <form name="myform" method="get" autocomplete="Off">
+    <form name="personal_data" method="get" autocomplete="Off" id="form-datas">
       <table class="table-style table-text">
-        <tr>
-        <td> <p>Your personal dates</p></td>
-        </tr><tr>
-        <td>Name:<input type="text" name="name" id="name" autofocus></td>
+      <tr>
+      <td> <p>Your personal dates</p></td>
       </tr> <tr>
-        <td>Surname:<input type="text" name="surname" id="surname"></td>        
+      <td>Usuario: <input pattern="[A-Za-z]{3}" type="text" name="usuario" id="usuario" maxlength="10" > </td>
+      </tr><tr>
+      <td>Name:<input type="text" name="name" id="name" value="Obligatorio nombre" autofocus></td>
+      </tr> <tr>
+        <td>Surname:<input type="text" name="surname" id="surname" ></td>        
       </tr>
-      <!--<tr>
+      <tr>
         <td><datalist id="information">
           <option value="Man"></option>
           <option value="Woman"></option>
       </datalist>
-      Gender:&nbsp;<input type="tel" name="Gender" id="information" list="information"></td>
-      </tr>
-       <tr>
-        <td>Age:<input type="range" name="Age" id="age"></td>
-      </tr> -->
-        <!--<tr>
-        <td>E-mail:<input type="email" name="E-Mail" id="email" placeholder="         ...@..." required></td>        
+        Gender:&nbsp;<input type="tel" name="Gender" id="information" list="information" ></td>
+      </tr><tr><td>
+        Age:<input type="text" name="Age" id="age"></td>
+      </tr> <tr> <td>
+        <!-- <output id="range" name="result">0 a 40</output>  </td> -->
+      </tr><tr><td>
+        E-mail:<input type="email" name="E-Mail" id="email" placeholder="         ...@..." >
+      </td></tr> <tr><td>
+        Search:<input type="search" name="Search" id="search" ></td>  
       </tr> <tr>
-      <td>Search:<input type="search" name="Search" id="search"></td>  
+        <td>Url:<input type="range" name="Web-site" id="url" min="0" max="140" step="20" value="40" ></td>
       </tr> <tr>
-        <td>Url:<input type="url" name="Web-site" id="url"></td>
+        <td>Number Phone:<input type="tel" name="Phone" id="phone" ></td>
       </tr> <tr>
-        <td>Number Phone:<input type="tel" name="Phone" id="phone"></td>
-      </tr> <tr>
-        <td>Address:<input type="number" min="1" max="150" name="Adresse" id="adress"></td>
+        <td>Address:<input type="number" min="1" max="150" name="Adresse" id="adress" ></td>
       </tr>  <tr>
-        <td>Born Date:<input type="date" name="Date" id="ageborn"></td>
+        <td>Born Date:<input type="date" name="Date" id="ageborn" ></td>
       </tr> <tr>
-        <td>Week:<input type="week" name="Week" id="week"></td>
+        <td>Week:<input type="week" name="Week" id="week" ></td>
       </tr> <tr>
-          <td>Gender:<input type="week" name="information" id="information" list="information"></td>
+          <td>Gender:<input type="week" name="information" id="information" list="information" ></td>
       </tr><tr>
-        <td>Postal code: <input patter="[0-8]{5}" name="codpost" placeholder="5 digits"></td>
-      </tr>  -->
+        <td>Postal code: <input patter="[0-8]{5}" name="codpost" placeholder="5 digits" ></td>
+      </tr>  
       <tr> 
         <td><input type="submit" value="Send" id="send"></td>
       </tr> 
-      </table>
+      <tr>
+        <td>
+          <label for="refecenres"> 
+            <select name="refer" id="refer">
+            <option value="null">Select a country</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Uruguay">Uruguay</option>
+            <option value="Brasil">Brasil</option>
+            <option value="Chile">Chile</option>
+            <option value="Paraguay">Paraguay</option>
+            </select>          
+        </label>
+        </td> 
+    
+      </tr> 
+      <tr>
+        <td>Gender: 
+          <input type="radio" name="gender" value="male" id="male">
+          <input type="radio" name="gender" value="female" id="female">
+        </td>
+      </tr>
+      <tr>
+        <td>I study...</td>
+        
+        <tr>
+          <td><label><input type="checkbox" name="meteorology" value="Meteorology">Meteorology</label></td>
+        </tr>
+        <tr>
+          <td><label><input type="checkbox" name="engineering" value="Engineering">Engineering</label></td>
+        </tr>
+        <tr>
+          <td><label><input type="checkbox" name="programming" value="Programming">Programming</label></td>
+        </tr>
+        <tr>
+          <td><label><input type="checkbox" name="physics" value="Physics">Physics</label></td>
+        </tr>
+        <tr>
+          <td><label><input type="checkbox" name="languages" value="Languages">Languages</label></td>
+        </tr>
+        <tr>
+          <td><label><input type="checkbox" name="music" value="Music">Music</label></td>
+        </tr>
+          
+        
       
+      </tr>
       
+    </table>
+      
+
+
     </form>
-  
+
+    <div id="knowledge">
+
+    </div>
+
+
+    <tr>
+      <td></td>
+      <td><table width="400" class="table-style">
+        <td>Pay mode</td>
+        <tr>
+          <td><input type="radio" name="Pay" value="Paypal" id="paypal"></td>
+          <td><label for="">PayPal</label></td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="Pay" value="Visa" id="visa"></td>
+          <td><label for="">Visa</label></td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="Pay" value="Mastercard" id="mastercard"></td>
+            <td><label for="">Mastercard</label></td>
+          </tr>
+       
+      </table>
+      </td>
+    </tr>
+      
+
+
+
+    <tr>
+    <td><table width="400" class="table-style">
+      <tr>
+        <td><label for="target" id="nro-target">Nº target</label></td>
+        <td><input type="text" name="target" id="target"></td>
+      </tr>
+      <tr>
+        <td><label for="email" id="mail">Email</label></td>
+        <td><input type="text" name="e-mail" id="e-mail"></td>
+      </tr>
+    </table>
+  </td></tr>
+
+
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/form.js" ></script>
+
   </body>
 
 </html>

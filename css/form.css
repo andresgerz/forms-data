@@ -1,14 +1,57 @@
+/* Reset CSS */
+
+html,body,h1,h2,h3,h4,h5,h6,p,ol,ul,li,pre,code,address,form,
+fieldset,blockquote,header,footer,section,aside,nav,div,a{
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  font-weight: normal;
+}
+
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th, caption{
+  font-weight: normal;
+  text-align: left;
+}
+
+ol{
+  margin-left: 1.4em;
+  list-style: decimal;
+}
+
+ul{
+  margin-left: 1.4em;
+  list-style: square;
+}
+
+img, fieldset{
+  border: 0;
+}
+
+q:before, q:after{
+  content: '';
+}
+
+/* ================================================================================================================= */
+
+
 .body-style{
+  height: 200vh;
   background-color:skyblue;
 }
 
 .table-style{
+  width: 50vw;
   text-align: center;
   font-size: 20px;
   font-family: 'Times New Roman', Times, serif;
   padding: 20px;
   border: 2px solid blue;
-  margin: 5% 0 0 33%;
+  margin: auto;
   background-color: lightblue;
 }
 
@@ -32,5 +75,9 @@ td{
   background: -o-linear-gradient(bottom,white,blue);
   box-shadow: black 10px 10px 10px;
 
+}
 
+#target, #e-mail, #mail, #nro-target{
+  /* background-color: lightblue; */
+  visibility: hidden;
 }
